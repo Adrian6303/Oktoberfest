@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Oktoberfest | Galerie foto</title>
+
+<link rel="stylesheet" href="styles.css"/>
+</head>
+
+
+<body>
+
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="Oktoberfest_home.html">Acasa</a></li>
+                <li><a href="Munchen.html">München</a></li>
+                <li><a href="Brasov.html">Brașov</a></li>
+                <li><a href="Galerie_foto.html">Galerie foto</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 class="fest-name fest-name-large">Oktoberfest</h1>
+        
+       
+    </header>
+    <section class="contend-section container">
+        <h2 class="section-header-foto">Galerie foto</h2>  
+        <div class="container-gallery">
+            <div class="image">
+                <img src="Images/Oktoberfest_cai.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="Images/Oktoberfest_mese.webp" alt="">
+            </div>
+            <div class="image">
+                <img src="Images/Oktoberfest_parc.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="Images/Oktoberfest-mese-brasov.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="Images/Oktoberfest-cort.jpg" alt="">
+            </div>
+    
+            <div class="button">
+                <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+                <a onclick="nextimg(1)" class="next">&#10095;</a>
+            </div>
+    
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+        <script>
+
+            var imageno =1;
+            displayimg(imageno);
+    
+            function nextimg(n){
+                displayimg(imageno += n)
+            }
+    
+            function currentSlide(n){
+                displayimg(imageno = n)
+            }
+    
+            function displayimg(n){
+                var i;
+                var image = document.getElementsByClassName("image");
+                var dots = document.getElementsByClassName("dot");
+    
+                if(n > image.length){
+                    imageno = 1;
+                }
+    
+                if(n < 1){
+                    imageno = image.length;
+                }
+    
+                for(i=0; i < image.length; i++){
+                    image[i].style.display = "none";
+                }
+    
+                for(i=0; i < dots.length; i++){
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+    
+                image[imageno - 1].style.display ="block";
+                dots[imageno - 1].className += " active";
+    
+            }
+    
+        </script>
+        
+    </section>
+    
+
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+        <h3 class="fest-name">Oktoberfest</h3>
+        <img class="animation" src="Images/animatie-bere.gif">
+        
+        <ul class="nav footer-nav">
+            <lI>
+                <a href="https://ro-ro.facebook.com/OktoberfestRomania/" target="_blank">Facebook<img src="Images/facebook-logo.png"></a>
+            </lI>
+            <li>
+                <a href="https://ro.wikipedia.org/wiki/Oktoberfest" target="_blank">Wikipedia<img src="Images/Wikipedia-logo.png"></a>
+            </li>
+        </ul>
+    </div>
+    </footer>
+		   
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Oktoberfest | Quiz</title>
+
+<link rel="stylesheet" href="styles.css"/>
+</head>
+
+
+<body>
+
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="Oktoberfest_home.html">Acasa</a></li>
+                <li><a href="Munchen.html">München</a></li>
+                <li><a href="Brasov.html">Brașov</a></li>
+                <li><a href="Galerie_foto.html">Galerie foto</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 class="fest-name fest-name-large">Oktoberfest</h1>
+        
+       
+    </header>
+    <section class="contend-section container">
+        
+      <h2 class="section-header-foto">Întrebari despre Oktoberfest</h2>
+        
+      <section class="intrebari-quiz">
+      1. Unde a apărut festivalul Oktoberfest?<br>
+      <input type="radio" name="intrebarea1">Berlin<br>
+      <input type="radio" name="intrebarea1" id="correct1">München<br>
+      <input type="radio" name="intrebarea1">Viena<br>
+      <input type="radio" name="intrebarea1">Brașov<br>
+      <br>
+      2. Ce băutura defineste festivalul Oktoberfest?<br>
+      <input type="radio" name="intrebarea2" id="correct2">Berea <br>
+      <input type="radio" name="intrebarea2">Vinul<br>
+      <input type="radio" name="intrebarea2">Țuica<br>
+      <input type="radio" name="intrebarea2">Coniacul<br>
+      <br>
+      3. Ce gen muzical este predominant la Oktoberfest?<br>
+      <input type="radio" name="intrebarea3">muzica clasică<br>
+      <input type="radio" name="intrebarea3">muzica rap<br>
+      <input type="radio" name="intrebarea3">muzica tehno<br>
+      <input type="radio" name="intrebarea3"id="correct3">muzica bavareză<br>
+      <br>
+      4. În ce perioadă se desfasoară Oktoberfest?<br>
+      <input type="radio" name="intrebarea4">iunie-iulie<br>
+      <input type="radio" name="intrebarea4">aprilie-mai<br>
+      <input type="radio" name="intrebarea4"id="correct4">septembrie-oktombrie<br>
+      <input type="radio" name="intrebarea4">noiembrie-decembrie<br>
+      </section>
+      <section class="center-btn">
+      <input type="submit" name="submit" value="Trimite raspunsurile" onclick="result()" class="btn-quiz">
+      </section>
+      <script>
+        function result(){
+
+          var score=0;
+          if(document.getElementById('correct1').checked)
+          {
+            score++;
+          }
+          if(document.getElementById('correct2').checked)
+          {
+            score++;
+          }
+          if(document.getElementById('correct3').checked)
+          {
+            score++;
+          }
+          if(document.getElementById('correct4').checked)
+          {
+            score++;
+          }
+          if(score>2)
+            alert("Scorul obtinut este "+score+"/4. Felicitari!");
+          else
+            alert("Scorul obtinut este "+score+"/4. Mai incearca!");
+        }
+      </script>
+    </section>
+    
+
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+        <h3 class="fest-name">Oktoberfest</h3>
+        <img class="animation" src="Images/animatie-bere.gif">
+        
+        <ul class="nav footer-nav">
+            <lI>
+                <a href="https://ro-ro.facebook.com/OktoberfestRomania/" target="_blank">Facebook<img src="Images/facebook-logo.png"></a>
+            </lI>
+            <li>
+                <a href="https://ro.wikipedia.org/wiki/Oktoberfest" target="_blank">Wikipedia<img src="Images/Wikipedia-logo.png"></a>
+            </li>
+        </ul>
+    </div>
+    </footer>
+		   
+</body>
+
+</html>
